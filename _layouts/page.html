@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section class="section">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="mb-4">{{ page.title | escape }}</h2>
+			
+			{% if page.image %}
+			<img src="{{site.baseurl}}/assets/images/{{page.image}}" alt="{{page.title}}" class="img-fluid w-100 mb-4">
+			{% endif %}
+
+			{{ content }}
+
+		</div>
+	</div>
+</div>
+</section>
+
+{% include instagram.html %}

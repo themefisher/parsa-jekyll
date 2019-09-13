@@ -1,0 +1,143 @@
+---
+layout: default
+---
+
+{% if site.layout_home_page == true %}
+{% if site.featured-post-slider == true %}
+<!-- featured post -->
+<section>
+  <div class="container-fluid p-sm-0">
+    <div class="row featured-post-slider">
+      {% for post in site.posts %}
+      {% if post.featured == true %}
+      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+        <article class="card bg-dark text-center text-white border-0 rounded-0">
+          <img class="card-img rounded-0 img-fluid w-100" src="{{site.baseurl}}/{{post.image}}" alt="{{post.title}}">
+          <div class="card-img-overlay">
+            <div class="card-content">
+              {% if post %}
+                {% assign categories = post.categories %}
+              {% else %}
+              {% assign categories = page.categories %}
+              {% endif %}
+              {% for category in categories %}
+              <p class="text-uppercase">{{category}}</p>
+              {% endfor %}
+              <h4 class="card-title mb-4"><a class="text-white" href="{{ post.url | prepend: site.baseurl }}">Organize Your Life With 10 Simple rule</a></h4>
+              <a class="btn btn-outline-light" href="{{ post.url | prepend: site.baseurl }}">read more</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- /featured post -->
+{% endif %}
+
+<!-- blog post -->
+<section class="section">
+  <div class="container">
+    <div class="row masonry-container">
+			{% if site.posts.size > 0 %}
+			{% for post in paginator.posts %}
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <article class="text-center">
+					<img class="img-fluid mb-4" src="{{site.baseurl}}/{{post.image}}" alt="{{post.title}}">
+					{% if post %}
+						{% assign categories = post.categories %}
+					{% else %}
+					{% assign categories = page.categories %}
+					{% endif %}
+					{% for category in categories %}
+					<p class="text-uppercase mb-2">{{category}}</p>
+					{% endfor %}
+          <h4 class="title-border"><a class="text-dark" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h4>
+          <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-transparent">read more</a>
+        </article>
+      </div>
+			{% endfor %}
+			{% endif %}
+    </div>
+    {% include pagination.html %}
+  </div>
+</section>
+<!-- /blog post -->
+
+{% include instagram.html %}
+
+{% else %}
+
+<!-- dividers -->
+<div class="dividers">
+  <div class="divider"></div>
+  <div class="divider"></div>
+  <div class="divider"></div>
+  <div class="divider"></div>
+</div>
+
+<!-- hero area -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-end">
+        <h1 class="mb-0">Welcome</h1>
+        <h2 class="mb-100 title-border-lg">to <i>{{site.author.name}} Blog</i></h2>
+        <p class="mb-80 mr-5">{{site.hero.hero-subtitle}}</p>
+        <span class="font-secondary text-dark mr-3 mr-sm-5">Follow</span>
+        <ul class="list-inline d-inline-block mb-5">
+          {% for social in site.social %}
+          <li class="list-inline-item mx-3"><a href="{{ social.link }}" class="text-dark"><i class="{{ social.icon }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-lg-6 text-right">
+        <img class="img-fluid" src="{{site.baseurl}}/assets/images/{{site.hero.hero-banner}}" alt="banner-image">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /hero area -->
+
+<!-- blog post -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      {% if site.posts.size > 0 %}
+      {% for post in paginator.posts %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% if thecycle == 'odd' %}
+        {% assign class = '' %}
+      {% else %}
+        {% assign class = 'article-right' %}
+      {% endif %}
+      <div class="col-12 mb-100">
+        <article data-file="{{ post.url | prepend: site.baseurl }}" data-target="article" class="article-full-width {{class}}">
+          <div class="post-image">
+            <img class="img-fluid" src="{{site.baseurl}}/{{post.image}}" alt="{{post.title}}">
+          </div>
+          <div class="post-content">
+            <ul class="list-inline d-flex justify-content-between border-bottom post-meta pb-2 mb-4">
+              <li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{post.date | date: '%b %d, %Y'}}</li>
+              <li class="list-inline-item"><i class="ti-alarm-clock mr-2"></i><span class="eta"></span> read</li>
+            </ul>
+            <h4 class="mb-4"><a href="{{ post.url | prepend: site.baseurl }}" class="text-dark">{{post.title}}</a></h4>
+            <p class="mb-0 post-summary">{{ post.content | strip_html | truncatewords: 35 }}</p>
+            <a class="btn btn-transparent mb-4" href="{{ post.url | prepend: site.baseurl }}">Continue...</a>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+			{% endif %}
+    </div>
+    {% include pagination.html %}
+  </div>
+</section>
+<!-- /blog post -->
+
+{% include instagram.html %}
+
+{% endif %}

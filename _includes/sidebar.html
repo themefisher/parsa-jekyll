@@ -1,0 +1,54 @@
+<div class="col-lg-4">
+  <div class="widget search-box">
+    <form action="/search.html" method="get">
+      <i class="ti-search"></i>
+      <input type="search" id="search-box" class="form-control border-0 pl-5" name="query"
+        placeholder="Search">
+    </form>
+  </div>
+  <div class="widget">
+    <h6 class="mb-4">LATEST POST</h6>
+    {% for post in site.posts limit:3 %}
+    <div class="media mb-4">
+      <div class="post-thumb-sm mr-3">
+        <img class="img-fluid" src="{{site.baseurl}}/{{post.image}}" alt="{{ post.title }}">
+      </div>
+      <div class="media-body">
+        <ul class="list-inline d-flex justify-content-between mb-2">
+          <li class="list-inline-item">Post By {{site.author.name | split: ' ' | first}}</li>
+          <li class="list-inline-item">{{post.date | date: "%B %-d, %Y"}}</li>
+        </ul>
+        <h6><a class="text-dark" href="{{ post.url }}">{{ post.title }}</a></h6>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="widget">
+    <h6 class="mb-4">TAG</h6>
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    {% assign tag_words = site_tags | split:',' | sort %}
+    <ul class="list-inline tag-list">
+      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+      <li class="list-inline-item m-1"><a href="{{ site.baseurl }}/tag/{{ this_word | cgi_escape }}">{{ this_word }}</a></li>
+      {% endunless %}{% endfor %}
+    </ul>
+  </div>
+  {% if page.categories.size > 0 %}
+  <div class="widget">
+    <h6 class="mb-4">CATEGORIES</h6>
+    <ul class="list-inline tag-list">
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+      {% assign category = site.categories %}
+      {% for category in categories %}
+      <li class="list-inline-item m-1"><a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a></li>
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

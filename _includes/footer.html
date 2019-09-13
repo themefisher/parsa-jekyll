@@ -1,0 +1,45 @@
+<footer class="bg-secondary">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        {% if site.logo %}
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/images/{{site.logo}}" alt="{{site.title}}" class="img-fluid"></a>
+        </div>
+        {% endif %}
+        {% if site.contact.address %}
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h6>Address</h6>
+          <ul class="list-unstyled">
+            <li class="font-secondary text-dark">{{site.contact.address.city}}</li>
+            <li class="font-secondary text-dark">{{site.contact.address.street}}</li>
+          </ul>
+        </div>
+        {% endif %}
+        {% if site.contact %}
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li class="font-secondary text-dark">Tel: {{site.contact.phone}}</li>
+            <li class="font-secondary text-dark">Mail: {{site.contact.email}}</li>
+          </ul>
+        </div>
+        {% endif %}
+        {% if site.social %}
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h6>Follow</h6>
+          <ul class="list-inline d-inline-block">
+            {% for social in site.social %}
+            <li class="list-inline-item"><a href="{{ social.link }}" class="text-dark"><i class="{{ social.icon }}"></i></a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="text-center pb-3">
+    <p class="mb-0">Copyright ©<script>var CurrentYear = new Date().getFullYear()
+    document.write(CurrentYear)</script> a theme by  <a href="https://themefisher.com/">themefisher.com</a></p>
+  </div>
+</footer>

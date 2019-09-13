@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<!-- page-title -->
+<section class="section bg-secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>{{ page.tag }}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page-title -->
+
+<!-- tag post -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row masonry-container pt-5">
+          {% for post in page.posts %}
+          <div class="col-sm-6 mb-5">
+            <article class="text-center">
+              <img class="img-fluid mb-4" src="{{site.baseurl}}/{{post.image}}" alt="{{post.title}}">
+              {% if post %}
+                {% assign categories = post.categories %}
+              {% else %}
+                {% assign categories = page.categories %}
+              {% endif %}
+              {% for category in categories %}
+              <p class="text-uppercase mb-2">{{category}}</p>
+              {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+              <h4 class="title-border"><a class="text-dark" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h4>
+              <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
+              <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-transparent">read more</a>
+            </article>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% include sidebar.html %}
+    </div>
+  </div>
+</section>
+<!-- /tag post -->

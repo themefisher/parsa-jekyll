@@ -1,0 +1,39 @@
+<header class="navigation">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    {% if site.logo %}
+    <a class="navbar-brand" href="{{site.baseurl}}/"><img class="img-fluid" src="{{site.baseurl}}/assets/images/{{site.logo}}" alt="{{site.title}}"></a>
+    {% endif %}
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
+      aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navogation">
+      <ul class="navbar-nav ml-auto">
+        {% for menu-item in site.menu %}
+        {% if menu-item.submenu %}
+        <li class="nav-item dropdown">
+          <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="navbarDropdown"
+            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{menu-item.name}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {% for submenu-item in menu-item.submenu %}
+            <a class="dropdown-item" href="{{submenu-item.url}}">{{submenu-item.name}}</a>
+            {% endfor %}
+          </div>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="{{ menu-item.url }}">{{ menu-item.name }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      <form class="form-inline position-relative ml-lg-4" action="/search.html" method="get">
+        <input class="form-control px-0 w-100" type="search" id="search-box" name="query" placeholder="Search">
+        <button class="search-icon" type="submit"><i class="ti-search text-dark"></i></button>
+      </form>
+    </div>
+  </nav>
+</header>
