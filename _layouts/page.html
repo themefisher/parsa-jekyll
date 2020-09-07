@@ -8,7 +8,7 @@ layout: default
 			<h2 class="mb-4">{{ page.title | escape }}</h2>
 			
 			{% if page.image %}
-			<img src="{{site.baseurl}}/assets/images/{{page.image}}" alt="{{page.title}}" class="img-fluid w-100 mb-4">
+			<img src="{{page.image | relative_url}}" alt="{{page.title}}" class="img-fluid w-100 mb-4">
 			{% endif %}
 
 			{{ content }}

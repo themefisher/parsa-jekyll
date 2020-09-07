@@ -23,7 +23,7 @@ layout: default
 					<li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{page.date | date: '%b %d, %Y'}}</li>
 				</ul>
 				{% if page.image %}
-				<img src="{{site.baseurl}}/{{page.image}}" alt="{{page.title}}" class="w-100 img-fluid mb-4">
+				<img src="{{page.image | relative_url}}" alt="{{page.title}}" class="w-100 img-fluid mb-4">
 				{% endif %}
 				<div class="content">
 					{{ content }}

@@ -1,19 +1,19 @@
 ---
 layout: default
 ---
-<!-- page-title -->
+
 <section class="section bg-secondary">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h4>{{ page.tag }}</h4>
+        <h4>{{ page.title }}</h4>
       </div>
     </div>
   </div>
 </section>
 <!-- /page-title -->
 
-<!-- tag post -->
+<!-- category post -->
 <section>
   <div class="container">
     <div class="row">
@@ -23,14 +23,7 @@ layout: default
           <div class="col-sm-6 mb-5">
             <article class="text-center">
               <img class="img-fluid mb-4" src="{{post.image | relative_url}}" alt="{{post.title}}">
-              {% if post %}
-                {% assign categories = post.categories %}
-              {% else %}
-                {% assign categories = page.categories %}
-              {% endif %}
-              {% for category in categories %}
-              <p class="text-uppercase mb-2">{{category}}</p>
-              {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
+              <p class="text-uppercase mb-2">{{ post.categories }}</p>
               <h4 class="title-border"><a class="text-dark" href="{{ post.url | relative_url }}">{{post.title}}</a></h4>
               <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
               <a href="{{ post.url | relative_url }}" class="btn btn-transparent">read more</a>
@@ -39,8 +32,10 @@ layout: default
           {% endfor %}
         </div>
       </div>
+      <!-- /blog post -->
       {% include sidebar.html %}
+      </div>
     </div>
   </div>
 </section>
-<!-- /tag post -->
+<!-- /category post -->

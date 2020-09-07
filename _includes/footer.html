@@ -4,7 +4,7 @@
       <div class="row">
         {% if site.logo %}
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-          <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/images/{{site.logo}}" alt="{{site.title}}" class="img-fluid"></a>
+          <a href="{{site.baseurl}}/"><img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid"></a>
         </div>
         {% endif %}
         {% if site.contact.address %}
@@ -38,8 +38,5 @@
       </div>
     </div>
   </div>
-  <div class="text-center pb-3">
-    <p class="mb-0">Copyright ©<script>var CurrentYear = new Date().getFullYear()
-    document.write(CurrentYear)</script> a theme by  <a href="https://themefisher.com/">themefisher.com</a></p>
-  </div>
+  <div class="text-center pb-3">{{site.copyright | markdownify}}</div>
 </footer>
