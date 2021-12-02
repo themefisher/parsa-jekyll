@@ -180,6 +180,20 @@ TRUE + TRUE + FALSE + 2*TRUE
 
      [1] 4
 
+Pensando agora nos objetos com diferentes estruturas frequentemente utilizados no dia a dia por usuários de R, temos os seguintes:
+
+&nbsp;- Vetor
+
+&nbsp;- Matriz
+
+&nbsp;- Array
+
+&nbsp;- Data Frame
+
+&nbsp;- Lista
+
+Todos estes objetos tem a característica de poder conter diversos valores ao mesmo tempo, e podem ser atribuídos à uma variável como fizemos com valores isolados anteriormente, e então podemos utilizar estruturas com milhares de dados em apenas uma variável para realizar manipulações e análises sem muitos problemas.
+
 ## Dicas
 
 Durante a construção de um script (arquivo de códigos, geralmente arquivos .R) é de extrema importância incluir explicações a respeito do que está sendo feito, pois é importante que a leitura do script esteja o mais clara possível para outras pessoas que forem ler entenderem o que foi feito, o que inclui também a própria pessoa que fez o script, já que é muito comum ter que retornar à um script feito semanas ou meses atrás, e caso as linhas de códigos não possuirem orientações, o próprio autor terá dificuldade de entender o que foi feito. A inclusão de explicações pode ser feita através de comentários utilizando o símbolo #, como por exemplo:
@@ -218,3 +232,7 @@ Sempre que houver a dúvida sobre o que um determinado comando ou função faz, 
 ![imagem](/assets/images/posts/iniciando-no-R/help.jpg)
 
 Vemos na figura acima que ao dar entrada no comando *help("hist")* no console, a aba *Help* foi atualizada com uma descrição da função *hist*.
+
+Caso o console retorne algum erro após tentar executar um código, uma dica é copiar o erro e pesquisá-lo no google, pois é muito provável que alguém já tenha tido o mesmo erro, o que torna fácil na maioria das vezes de se encontrar soluções.
+
+Todo o conteúdo aqui abordado serve de introdução às pessoas que nunca tiveram contato com o R anteriormente. A comunidade é extremamente ativa, e é possível encontrar um vasto mundo de tutoriais e guias com uma simples pesquisa na internet, facilitando a aprendizagem.

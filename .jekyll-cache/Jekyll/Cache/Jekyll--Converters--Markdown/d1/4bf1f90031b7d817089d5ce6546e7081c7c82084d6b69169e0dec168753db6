@@ -1,4 +1,4 @@
-I"�D<p>Nos dias atuais o uso de linguagens de programação tem sido indispensável no dia a dia de profissionais das mais diversas áreas, dentre elas ouvimos frequêntemente falar de Java, Python, Ruby e várias outras. Essas ferramentas nos possibilitam otimizar processos do dia a dia, como também auxiliar na resolução de problemas mais complexos.</p>
+I"�V<p>Nos dias atuais o uso de linguagens de programação tem sido indispensável no dia a dia de profissionais das mais diversas áreas, dentre elas ouvimos frequêntemente falar de Java, Python, Ruby e várias outras. Essas ferramentas nos possibilitam otimizar processos do dia a dia, como também auxiliar na resolução de problemas mais complexos.</p>
 
 <h2 id="o-que-é-r-">O que é R ?</h2>
 <p>O R é uma linguagem de programação e também um ambiente de análise de dados criada por Robert Gentleman e Ross Ihaka. Tem sido amplamente utilizada no mundo acadêmico devido a sua alta eficácia para lidar com todos os tipos de dados e lidar com problemas complexos, e tem ganhado cada vez mais espaço nos últimos anos nas mais variadas áreas e mercados. Tudo isso não é atoa, o R tem sido visto não mais apenas como uma linguagem de programação, mas como um conjunto de soluções estatísticas e computacionais extremamente poderoso que permite a realização de investigações profundas em bases de dados.</p>
@@ -161,6 +161,59 @@
 </span></code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] 4
+</code></pre></div></div>
+
+<p>Pensando agora nos objetos com diferentes estruturas frequentemente utilizados no dia a dia de um usuário de R, temos o seguinte:</p>
+
+<p><strong>Vetores</strong></p>
+
+<p>Os vetores são estruturas unidimensionais capazes de conter usualmente valores numéricos, strings e valores lógicos, onde sua sintaxe tem a seguinte forma:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
+</span><span class="n">x</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 2 3 4 5
+</code></pre></div></div>
+
+<p>Todas as operações básicas apresentadas anteriormente podem ser usadas com vetores, onde a operação em questão será efetuada elemento à elemento:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
+</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Soma de vetores</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 2 3 4 5 6
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Diferença de vetores</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0 1 2 3 4
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Produto de vetores</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 2 3 4 5
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Divisão de vetores</span><span class="w">
+</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 2 3 4 5
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Potencia de vetores</span><span class="w">
+</span><span class="n">y</span><span class="o">^</span><span class="n">x</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 1 1 1 1
 </code></pre></div></div>
 
 <h2 id="dicas">Dicas</h2>

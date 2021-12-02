@@ -1,0 +1,215 @@
+I"I<p>Nos dias atuais o uso de linguagens de programação tem sido indispensável no dia a dia de profissionais das mais diversas áreas, dentre elas ouvimos frequêntemente falar de Java, Python, Ruby e várias outras. Essas ferramentas nos possibilitam otimizar processos do dia a dia, como também auxiliar na resolução de problemas mais complexos.</p>
+
+<h2 id="o-que-é-r-">O que é R ?</h2>
+<p>O R é uma linguagem de programação e também um ambiente de análise de dados criada por Robert Gentleman e Ross Ihaka. Tem sido amplamente utilizada no mundo acadêmico devido a sua alta eficácia para lidar com todos os tipos de dados e lidar com problemas complexos, e tem ganhado cada vez mais espaço nos últimos anos nas mais variadas áreas e mercados. Tudo isso não é atoa, o R tem sido visto não mais apenas como uma linguagem de programação, mas como um conjunto de soluções estatísticas e computacionais extremamente poderoso que permite a realização de investigações profundas em bases de dados.</p>
+
+<h2 id="por-que-r-">Por que R ?</h2>
+<p>Um dos principais benefícios de se utilizar o R se da pelo fato de ele ser um sofware open source (código aberto) e gratuito, em que está constantemente evoluindo devido as contribuições da própria comunidade, à qual é extremamente engajada no desenvolvimento de bibliotecas como também no suporte aos usuários.</p>
+
+<p>No R podemos programar, o que nos permite otimizar processos envolvendo análise de dados. Podemos vizualizar os dados de forma gráfica, facilitando a obtenção de ‘insights’ de forma rápida. Tudo isso em conjunto com a eficácia que conseguimos criar relatórios através de ferramentas como o RMardown, o R nos permite realizar trabalhos com uma ótima reprodutibilidade, fator extremamente importante na realização de pesquisas.</p>
+
+<h2 id="como-começar-no-r-">Como começar no R ?</h2>
+
+<p>Para iniciarmos no R devemos escolher um ambiente de desenvolvimento integrado (IDE) para podermos trabalhar. A maioria dos usuários utilizam o RStudio, o qual é extremamente intuitivo de se utilizar, e dispõe de um ótimo ambiente de trabalho.</p>
+
+<p>Realizada a escolha do ambiente de desenvolvimento que será utilizado, devemos instalar o R em nossa maquina, para isto, podemos seguir os seguintes passos:</p>
+
+<p><strong>Instalação do R base</strong></p>
+
+<p>O R base pode ser baixado diretamente da rede de distribuição do R em <a href="https://cran.r-project.org/">CRAN</a>, onde primeiramente deve-se escolher o sistema operacional (Linux, macOS ou Windows).</p>
+
+<p><img src="/assets/images/posts/iniciando-no-R/cran.jpg" alt="imagem" /></p>
+
+<p>Caso o sistema operacional escolhido for o Windows, deve-se escolher o subdiretório <em>base</em>.</p>
+
+<p><img src="/assets/images/posts/iniciando-no-R/cran2.jpg" alt="imagem" /></p>
+
+<p>Posteriormente basta fazer o download.
+<img src="/assets/images/posts/iniciando-no-R/cran3.jpg" alt="imagem" /></p>
+
+<p>Feito isso, basta abrir o arquivo executável que foi baixado na máquina e seguir os passos requeridos na instalação. Para usuários de Linux e macOS, após escolher o link de download do sistema operacional, com uma breve leitura das instruções que são disponibilizadas em texto é possível prosseguir com a instalação sem muitas dificuldades.</p>
+
+<p><strong>Instalação do RStudio</strong></p>
+
+<p>Pode ser baixado diretamente do site oficial em <a href="https://www.rstudio.com/">RStudio</a>.</p>
+
+<p><img src="/assets/images/posts/iniciando-no-R/rstudionew.jpg" alt="imagem" /></p>
+
+<p>Atualmente são disponibilizadas quatro versões do RStudio, sendo duas com licença comercial e duas com licença Open Source. Nosso interesse está no RStudio Desktop, o qual é gratuito e possui uma licença Open Source.</p>
+
+<p><img src="/assets/images/posts/iniciando-no-R/rstudio2.jpg" alt="imagem" /></p>
+
+<p>Depois disso, basta realizar o download e seguir as instruções de instalação do arquivo executável.</p>
+
+<p>Após instalar o R e o RStudio, será com o RStudio que iremos interagir, assim que abrirmos ele teremos a seguinte tela:</p>
+
+<p><img src="/assets/images/posts/iniciando-no-R/rsutdio3.jpg" alt="imagem" /></p>
+
+<p>Essas são as quatro principais áreas do ambiente do RStudio, cada uma é descrita a seguir:</p>
+
+<p> 1. Onde se escreve os códigos (principalmente arquivos do formato .R).</p>
+
+<p> 2. Área do console, onde se executa os códigos.</p>
+
+<p> 3. Nessa área temos diversas utilidades frequentemente utilizadas:</p>
+
+<p> - Podemos acessar arquivos e pastas do computador pela aba <em>Files</em>.</p>
+
+<p> - Na aba <em>Plots</em> visualizamos o resultado gráfico caso um comando desse tipo tenha sido executado.</p>
+
+<p> - Em <em>Packages</em> podemos manusear pacotes (instalar, atualizar ou deletar).</p>
+
+<p> - Na aba <em>Help</em> temos acesso à documentação de uma determinada função quando utilizado o comando help() ou ?.</p>
+
+<p> 4. Em <em>Environment</em> temos acesso a todos os objetos criados, e na aba <em>History</em> é disponível o histórico de códigos executados.</p>
+
+<p>Por padrão, o R lê as linhas de códigos da esquerda para a direita indo de cima para baixo, porém, ao se deparar com operações matemáticas ele respeita algumas prioridades onde, da operação com maior prioridade para a menor temos: potenciação &gt; multiplicação ou divisão &gt; adição ou subtração. Caso houver a necessidade de alterar essa ordem, isso pode ser feito utilizando parênteses.</p>
+
+<p>Para uma primeira interação com o ambiente de desenvolvimento, podemos utilizá-lo como uma calculadora ao dar entrada no console comandos como os listados abaixo:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Potencia</span><span class="w">
+</span><span class="m">2</span><span class="o">^</span><span class="m">5</span><span class="w">
+
+</span><span class="c1"># Multiplicação</span><span class="w">
+</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">5</span><span class="w">
+
+</span><span class="c1"># Divisão</span><span class="w">
+</span><span class="m">2</span><span class="o">/</span><span class="m">5</span><span class="w">
+
+</span><span class="c1"># Adição</span><span class="w">
+</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w">
+
+</span><span class="c1"># Subtração</span><span class="w">
+</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Para verificar a prioridade das operações vemos os seguintes exemplos:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Potência &gt; Multiplicação &gt; Soma</span><span class="w">
+</span><span class="m">2</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] 14
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Multiplicação &gt; Potência &gt; Soma</span><span class="w">
+</span><span class="m">2</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] 14
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Potência &gt; Soma &gt; Multiplicação</span><span class="w">
+</span><span class="p">(</span><span class="m">2</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] 18
+</code></pre></div></div>
+
+<p>Agora que conseguimos realizar calculos simples com o R, vamos falar de variáveis. As variáveis são onde iremos “guardar” objetos, e são de extrema importância por serem usadas a todo momento. O ato de “guardar” objetos dentro de variáveis é chamado de atribuição, e pode ser feito com &lt;- ou =, veremos alguns exemplos a seguir:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Variável x recebe o número 5.</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">5</span><span class="w">
+
+</span><span class="c1"># Variável x recebe o número 5.</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="w">
+
+</span><span class="c1"># Variável x recebe o número 5.</span><span class="w">
+</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">4</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Dentre as classes de objetos existentes no R, quatro deles se destacam por serem mais usados na prática, abaixo temos alguns exemplos e verificamos a classe de objetos que cada variável atribuída pertence:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># numeric/números reais.</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.9</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] "numeric"
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># integer/números inteiros.</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">5L</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] "integer"
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># character.</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"gestante"</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] "character"
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># logical/valores lógicos (TRUE,FALSE).</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
+</span><span class="nf">class</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] "logical"
+</code></pre></div></div>
+
+<p>Obs: Note que os valores lógicos são apresentados em letra maiúscula, isso é muito importante, pois o R diferencia letras maiúsculas de minúsculas, então valores lógicos só são reconhecidos assim se usados como TRUE ou FALSE.</p>
+
+<p>Vale mostrar também que cada valor lógico assume um valor numérico em específico, sendo TRUE referente ao valor 1, e FALSE referente ao valor 0:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kc">TRUE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kc">TRUE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="kc">TRUE</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] 4
+</code></pre></div></div>
+
+<p>Pensando agora nos objetos com diferentes estruturas frequentemente utilizados no dia a dia por usuários de R, temos os seguintes:</p>
+
+<p> - Vetor
+ - Matriz
+ - Array
+ - Data Frame
+ - Lista</p>
+
+<p>Todos estes objetos tem a característica de poder conter diversos valores ao mesmo tempo, e podem ser atribuídos à uma variável como fizemos com valores isolados anteriormente, e então podemos utilizar estruturas com milhares de dados em apenas uma variável para realizar manipulações e análises sem muitos problemas.</p>
+
+<h2 id="dicas">Dicas</h2>
+
+<p>Durante a construção de um script (arquivo de códigos, geralmente arquivos .R) é de extrema importância incluir explicações a respeito do que está sendo feito, pois é importante que a leitura do script esteja o mais clara possível para outras pessoas que forem ler entenderem o que foi feito, o que inclui também a própria pessoa que fez o script, já que é muito comum ter que retornar à um script feito semanas ou meses atrás, e caso as linhas de códigos não possuirem orientações, o próprio autor terá dificuldade de entender o que foi feito. A inclusão de explicações pode ser feita através de comentários utilizando o símbolo #, como por exemplo:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Variável que contém o valor 2.</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></code></pre></div></div>
+
+<p>O símbolo # pode ser usado para informar quem for ler o código posteriormente, mas também pode ser usado para dizer qual parte do seu script você não quer que seja executado, vejamos:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># É executado</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">  
+
+</span><span class="c1"># Não é executado</span><span class="w">
+</span><span class="c1">#y &lt;- 5 - 5</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Uma breve explicação do que o script faz como um todo também é uma boa prática a se adotar no início de cada arquivo.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Script para ensinar as utilidades de se comentar linhas de códigos</span><span class="w">
+
+</span><span class="c1"># É executado</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w">  
+
+</span><span class="c1"># Não é executado</span><span class="w">
+</span><span class="c1">#y &lt;- 5 - 5</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Obs: É possível comentar blocos de linhas de códigos de uma só vez, basta selecionar o que você não quer que seja executado e utilizar o comando ctrl + shift + c.</p>
+
+<p>Sempre que houver a dúvida sobre o que um determinado comando ou função faz, podemos pedir ajuda no próprio R através do comando help() ou ?, por exemplo:</p>
+
+<p><img src="/assets/images/posts/iniciando-no-R/help.jpg" alt="imagem" /></p>
+
+<p>Vemos na figura acima que ao dar entrada no comando <em>help(“hist”)</em> no console, a aba <em>Help</em> foi atualizada com uma descrição da função <em>hist</em>.</p>
+
+<p>Caso o console retorne algum erro após tentar executar um código, uma dica é copiar o erro e pesquisá-lo no google, pois é muito provável que alguém já tenha tido o mesmo erro, o que torna fácil na maioria das vezes de se encontrar soluções.</p>
+
+<p>Todo o conteúdo aqui abordado serve de introdução às pessoas que nunca tiveram contato com o R anteriormente. A comunidade é extremamente ativa, e é possível encontrar um vasto mundo de tutoriais e guias com uma simples pesquisa na internet, facilitando a aprendizagem.</p>
+:ET
