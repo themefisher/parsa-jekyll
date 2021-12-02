@@ -24,7 +24,7 @@ layout: default
               <p class="text-uppercase">{{category}}</p>
               {% endfor %}
               <h4 class="card-title mb-4"><a class="text-white" href="{{ post.url | relative_url }}">{{post.title}}</a></h4>
-              <a class="btn btn-outline-light" href="{{ post.url | relative_url }}">read more</a>
+              <a class="btn btn-outline-light" href="{{ post.url | relative_url }}">Leia Mais</a>
             </div>
           </div>
         </article>
@@ -56,7 +56,7 @@ layout: default
 					{% endfor %}
           <h4 class="title-border"><a class="text-dark" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h4>
           <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-transparent">read more</a>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-transparent">Leia mais</a>
         </article>
       </div>
 			{% endfor %}

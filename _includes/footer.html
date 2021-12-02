@@ -18,16 +18,15 @@
         {% endif %}
         {% if site.contact %}
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-          <h6>Contact Info</h6>
+          <h6>Email</h6>
           <ul class="list-unstyled">
-            <li class="font-secondary text-dark">Tel: {{site.contact.phone}}</li>
-            <li class="font-secondary text-dark">Mail: {{site.contact.email}}</li>
+            <li class="font-secondary text-dark">{{site.contact.email}}</li>
           </ul>
         </div>
         {% endif %}
         {% if site.social %}
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-          <h6>Follow</h6>
+          <h6>Siga o OOBr</h6>
           <ul class="list-inline d-inline-block">
             {% for social in site.social %}
             <li class="list-inline-item"><a href="{{ social.link }}" class="text-dark"><i class="{{ social.icon }}"></i></a></li>

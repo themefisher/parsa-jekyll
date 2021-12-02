@@ -10,7 +10,7 @@
         appendString += '<li class="border-bottom mb-4 pb-3"><h4><a class="text-dark" href="' + item.url + '">' + item.title + '</a></h4>';
         appendString +='<p>' + item.date + '</p>';
         appendString += '<p>' + item.content.substring(0, 245) + '...</p>';
-        appendString += '<a href="' + item.url + '" class="btn btn-transparent pl-0">' + "Read More" + '</a></li>';
+        appendString += '<a href="' + item.url + '" class="btn btn-transparent pl-0">' + "Leia Mais" + '</a></li>';
       }
 
       searchResults.innerHTML = appendString;
