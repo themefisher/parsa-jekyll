@@ -13,7 +13,7 @@ tags:
   - "Programação"
 ---
 
-Nos dias atuais o uso de linguagens de programação tem sido indispensável no dia a dia de profissionais das mais diversas áreas, dentre elas ouvimos frequêntemente falar de Java, Python, Ruby e várias outras. Essas ferramentas nos possibilitam otimizar processos do dia a dia, como também auxiliar na resolução de problemas mais complexos.
+Nos dias atuais o uso de linguagens de programação têm sido indispensáveis no dia a dia de profissionais das mais diversas áreas, dentre elas ouvimos frequêntemente falar de Java, Python, Ruby e várias outras. Essas ferramentas nos possibilitam otimizar processos do dia a dia, como também auxiliar na resolução de problemas mais complexos.
 
 ## O que é R ?
 O R é uma linguagem de programação e também um ambiente de análise de dados criada por Robert Gentleman e Ross Ihaka. Tem sido amplamente utilizada no mundo acadêmico devido a sua alta eficácia para lidar com todos os tipos de dados e lidar com problemas complexos, e tem ganhado cada vez mais espaço nos últimos anos nas mais variadas áreas e mercados. Tudo isso não é atoa, o R tem sido visto não mais apenas como uma linguagem de programação, mas como um conjunto de soluções estatísticas e computacionais extremamente poderoso que permite a realização de investigações profundas em bases de dados.
