@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tipos de gráficos e quando usá-los"
-date: 2021-12-14 14:46:10 +03:00
+date: 2021-12-15 14:46:10 +03:00
 description: "This is meta description"
 featured: true
 image: '/assets/images/posts/Tipos-de-gráficos/cape.jpg'
