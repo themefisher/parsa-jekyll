@@ -1,4 +1,4 @@
-I"�V<p>Nos dias atuais o uso de linguagens de programação tem sido indispensável no dia a dia de profissionais das mais diversas áreas, dentre elas ouvimos frequêntemente falar de Java, Python, Ruby e várias outras. Essas ferramentas nos possibilitam otimizar processos do dia a dia, como também auxiliar na resolução de problemas mais complexos.</p>
+I"JI<p>Nos dias atuais o uso de linguagens de programação têm sido indispensáveis no dia a dia de profissionais das mais diversas áreas, dentre elas ouvimos frequentemente falar de Java, Python, Ruby e várias outras. Essas ferramentas nos possibilitam otimizar processos do dia a dia, como também auxiliar na resolução de problemas mais complexos.</p>
 
 <h2 id="o-que-é-r-">O que é R ?</h2>
 <p>O R é uma linguagem de programação e também um ambiente de análise de dados criada por Robert Gentleman e Ross Ihaka. Tem sido amplamente utilizada no mundo acadêmico devido a sua alta eficácia para lidar com todos os tipos de dados e lidar com problemas complexos, e tem ganhado cada vez mais espaço nos últimos anos nas mais variadas áreas e mercados. Tudo isso não é atoa, o R tem sido visto não mais apenas como uma linguagem de programação, mas como um conjunto de soluções estatísticas e computacionais extremamente poderoso que permite a realização de investigações profundas em bases de dados.</p>
@@ -53,13 +53,13 @@
 
 <p> 3. Nessa área temos diversas utilidades frequentemente utilizadas:</p>
 
-<p> - Podemos acessar arquivos e pastas do computador pela aba <em>Files</em>.</p>
+<p> •  Podemos acessar arquivos e pastas do computador pela aba <em>Files</em>.</p>
 
-<p> - Na aba <em>Plots</em> visualizamos o resultado gráfico caso um comando desse tipo tenha sido executado.</p>
+<p> •  Na aba <em>Plots</em> visualizamos o resultado gráfico caso um comando desse tipo tenha sido executado.</p>
 
-<p> - Em <em>Packages</em> podemos manusear pacotes (instalar, atualizar ou deletar).</p>
+<p> •  Em <em>Packages</em> podemos manusear pacotes (instalar, atualizar ou deletar).</p>
 
-<p> - Na aba <em>Help</em> temos acesso à documentação de uma determinada função quando utilizado o comando help() ou ?.</p>
+<p> •  Na aba <em>Help</em> temos acesso à documentação de uma determinada função quando utilizado o comando help() ou ?.</p>
 
 <p> 4. Em <em>Environment</em> temos acesso a todos os objetos criados, e na aba <em>History</em> é disponível o histórico de códigos executados.</p>
 
@@ -153,7 +153,7 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] "logical"
 </code></pre></div></div>
 
-<p>Obs: Note que os valores lógicos são apresentados em letra maiúscula, isso é muito importante, pois o R diferencia letras maiúsculas de minúsculas, então valores lógicos só são reconhecidos assim se usados como TRUE ou FALSE.</p>
+<p>Obs: Note que os valores lógicos são apresentados em letra maiúscula, isso é muito importante, pois o R diferencia letras maiúsculas de minúsculas, então valores lógicos só são reconhecidos se escritos como TRUE ou FALSE..</p>
 
 <p>Vale mostrar também que cada valor lógico assume um valor numérico em específico, sendo TRUE referente ao valor 1, e FALSE referente ao valor 0:</p>
 
@@ -163,58 +163,19 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1] 4
 </code></pre></div></div>
 
-<p>Pensando agora nos objetos com diferentes estruturas frequentemente utilizados no dia a dia de um usuário de R, temos o seguinte:</p>
+<p>Pensando agora nos objetos com diferentes estruturas frequentemente utilizados no dia a dia por usuários de R, temos os seguintes:</p>
 
-<p><strong>Vetores</strong></p>
+<p> •  Vetor</p>
 
-<p>Os vetores são estruturas unidimensionais capazes de conter usualmente valores numéricos, strings e valores lógicos, onde sua sintaxe tem a seguinte forma:</p>
+<p> •  Matriz</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
-</span><span class="n">x</span><span class="w">
-</span></code></pre></div></div>
+<p> •  Array</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 2 3 4 5
-</code></pre></div></div>
+<p> •  Data Frame</p>
 
-<p>Todas as operações básicas apresentadas anteriormente podem ser usadas com vetores, onde a operação em questão será efetuada elemento à elemento:</p>
+<p> •  Lista</p>
 
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
-</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
-
-</span><span class="c1"># Soma de vetores</span><span class="w">
-</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 2 3 4 5 6
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Diferença de vetores</span><span class="w">
-</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0 1 2 3 4
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Produto de vetores</span><span class="w">
-</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 2 3 4 5
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Divisão de vetores</span><span class="w">
-</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 2 3 4 5
-</code></pre></div></div>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Potencia de vetores</span><span class="w">
-</span><span class="n">y</span><span class="o">^</span><span class="n">x</span><span class="w">
-</span></code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 1 1 1 1 1
-</code></pre></div></div>
+<p>Todos estes objetos tem a característica de poder conter diversos valores ao mesmo tempo, e podem ser atribuídos à uma variável como fizemos com valores isolados anteriormente, e então podemos utilizar estruturas com milhares de dados em apenas uma variável para realizar manipulações e análises sem muitos problemas.</p>
 
 <h2 id="dicas">Dicas</h2>
 
@@ -251,4 +212,8 @@
 <p><img src="/assets/images/posts/iniciando-no-R/help.jpg" alt="imagem" /></p>
 
 <p>Vemos na figura acima que ao dar entrada no comando <em>help(“hist”)</em> no console, a aba <em>Help</em> foi atualizada com uma descrição da função <em>hist</em>.</p>
+
+<p>Caso o console retorne algum erro após tentar executar um código, uma dica é copiar o erro e pesquisá-lo no google, pois é muito provável que alguém já tenha tido o mesmo erro, o que torna fácil na maioria das vezes de se encontrar soluções.</p>
+
+<p>Todo o conteúdo aqui abordado serve de introdução às pessoas que nunca tiveram contato com o R anteriormente. A comunidade é extremamente ativa, e é possível encontrar um vasto mundo de tutoriais e guias com uma simples pesquisa na internet, facilitando a aprendizagem.</p>
 :ET

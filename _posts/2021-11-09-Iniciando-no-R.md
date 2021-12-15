@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Iniciando na linguagem R"
-date: 2019-04-14 14:46:10 +03:00
+author: "José Carlos"
+date: 2021-12-01 14:46:10 +03:00
 description: "This is meta description"
 featured: true
 image: '/assets/images/posts/iniciando-no-R/cape.jpg'
@@ -68,13 +69,13 @@ Essas são as quatro principais áreas do ambiente do RStudio, cada uma é descr
 
 &nbsp;3. Nessa área temos diversas utilidades frequentemente utilizadas:
 
-&nbsp;- Podemos acessar arquivos e pastas do computador pela aba *Files*. 
+&nbsp;&bull;&nbsp; Podemos acessar arquivos e pastas do computador pela aba *Files*. 
 
-&nbsp;- Na aba *Plots* visualizamos o resultado gráfico caso um comando desse tipo tenha sido executado. 
+&nbsp;&bull;&nbsp; Na aba *Plots* visualizamos o resultado gráfico caso um comando desse tipo tenha sido executado. 
 
-&nbsp;- Em *Packages* podemos manusear pacotes (instalar, atualizar ou deletar). 
+&nbsp;&bull;&nbsp; Em *Packages* podemos manusear pacotes (instalar, atualizar ou deletar). 
 
-&nbsp;- Na aba *Help* temos acesso à documentação de uma determinada função quando utilizado o comando help() ou ?.
+&nbsp;&bull;&nbsp; Na aba *Help* temos acesso à documentação de uma determinada função quando utilizado o comando help() ou ?.
 
 &nbsp;4. Em *Environment* temos acesso a todos os objetos criados, e na aba *History* é disponível o histórico de códigos executados. 
 
@@ -170,7 +171,7 @@ class(x)
 
      [1] "logical"
 
-Obs: Note que os valores lógicos são apresentados em letra maiúscula, isso é muito importante, pois o R diferencia letras maiúsculas de minúsculas, então valores lógicos só são reconhecidos assim se usados como TRUE ou FALSE.
+Obs: Note que os valores lógicos são apresentados em letra maiúscula, isso é muito importante, pois o R diferencia letras maiúsculas de minúsculas, então valores lógicos só são reconhecidos se escritos como TRUE ou FALSE..
 
 Vale mostrar também que cada valor lógico assume um valor numérico em específico, sendo TRUE referente ao valor 1, e FALSE referente ao valor 0: 
 
@@ -182,15 +183,15 @@ TRUE + TRUE + FALSE + 2*TRUE
 
 Pensando agora nos objetos com diferentes estruturas frequentemente utilizados no dia a dia por usuários de R, temos os seguintes:
 
-&nbsp;- Vetor
+&nbsp;&bull;&nbsp; Vetor
 
-&nbsp;- Matriz
+&nbsp;&bull;&nbsp; Matriz
 
-&nbsp;- Array
+&nbsp;&bull;&nbsp; Array
 
-&nbsp;- Data Frame
+&nbsp;&bull;&nbsp; Data Frame
 
-&nbsp;- Lista
+&nbsp;&bull;&nbsp; Lista
 
 Todos estes objetos tem a característica de poder conter diversos valores ao mesmo tempo, e podem ser atribuídos à uma variável como fizemos com valores isolados anteriormente, e então podemos utilizar estruturas com milhares de dados em apenas uma variável para realizar manipulações e análises sem muitos problemas.
 
