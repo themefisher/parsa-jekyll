@@ -1,0 +1,68 @@
+I"�+<p>Quando se trabalha com dados, principalmente de forma colaborativa, é muito comum que as análises e seus resultados sejam postos em um relatório a fim de documentar a rotina de trabalho, compartilhar o código desenvolvido e comunicar os resultados obtidos. No R, em particular, isso facilmente pode ser feito por meio de um RMarkdown, um relatório dinâmico poderoso em contar histórias a respeito de dados. Ao proporcionar reprodutibilidade, flexibilidade de formatos e sintaxe bastante simples, propagou-se entre os usuários de R (com larga vantagem, obviamente) e também entre aqueles que não o são - para ser ter uma ideia, é possível usar as linguagens Python, JavaScript e SQL em RMarkdown.</p>
+
+<p>Intuitivamente, o “R” de RMarkdown vem da linguagem de programação R e o “Markdown” está relacionado com a linguagem de marcação do tipo <em>markdown</em>, que por sua vez informa apenas sobre a estrutura (conjunto de marcações) do projeto. Logo, RMarkdown nada mais é do que códigos R (no caso em que a programação é feita com R) incorporados em um arquivo <em>markdown</em>.</p>
+
+<p>Adiante, vamos ver como o RMarkdown funciona em sua forma mais simples, porém sem deixar de dizer como ele deve ser minimamente estruturado.</p>
+
+<p>Partindo do ponto que o R + RStudio já está instalado - caso não, deixamos como sugestão a leitura do post <a href="https://observatorioobstetrico.github.io/r/programação/2019/04/14/Iniciando-no-R/">Iniciando na linguagem R</a> -, um arquivo RMarkdown (.Rmd) precisa ser criado. Para isso, vá em <strong>File &gt; New File &gt; R Markdown…</strong>. A janela <strong>New R Markdown</strong> será aberta. Nela, já podemos definir qual será o título (em <strong>Title</strong>), o nome do autor (em <strong>Author</strong>) e o formato do arquivo (em <strong>Default Output Format</strong>). Em nosso exemplo, vamos criar um arquivo .Rmd em que o título é <em>Raça das gestantes e puérperas diagnosticadas com SRAG em 2021</em>, os autores são estes que vos falam e HTML é o tipo do arquivo que queremos que seja gerado. É importante dizer que o RMarkdown exporta  diferentes formatos para além desses exibidos como <em>default</em>.</p>
+
+<p><img src="/assets/images/posts/Relatórios-com-R-Markdown/fig1.png" alt="imagem" /></p>
+
+<p>Ao clicar em <strong>OK</strong>, um arquivo .Rmd será aberto no editor de <em>script</em> do RStudio com um roteiro pré-programado. Para não haver confusão, apague tudo o que estiver abaixo do cabeçalho (mais precisamente, tudo o que estiver abaixo do segundo <code class="language-plaintext highlighter-rouge">---</code>) e salve o arquivo com o nome que julgar adequado. Ah, caso queira alterar o nome do título e/ou o nome dos autores que foram definidos anteriormente, não tem problema, pode modificá-los normalmente. Inclusive, pode excluir a data e o autor se achar que são informações desnecessárias. O que não pode é deixar o arquivo sem o título e o <em>output</em>, informações indispensáveis para que o RMarkdown funcione. Em nosso caso, vamos apenas remover a data.</p>
+
+<p><img src="/assets/images/posts/Relatórios-com-R-Markdown/fig2.png" alt="imagem" /></p>
+
+<p>Como já deu para notar, é no cabeçalho (também conhecido como YAML) que estão as configurações gerais do documento. A princípio, determinamos somente o título, o nome dos autores e o formato do arquivo de interesse. Mas podem ser definidas muitas outras informações, como índice, seções, tema etc. Na <a href="https://bookdown.org/yihui/rmarkdown/html-document.html">documentação do RMarkdown para HTML</a> é possível ver com detalhes todas essas possibilidades.</p>
+
+<p>Após estabelecido o cabeçalho, é a partir daqui que as marcações de texto do <em>markdown</em> conjuntamente aos <em>chunks</em> começam a ser bastante utilizados. As marcações são sintaxes que vão indicar o que são desde títulos de seções, tópicos e imagens a links, códigos e expressões matemáticas, por exemplo:</p>
+
+<p> •  o tamanho do título de uma seção é determinado pela quantidade de #, em que quanto menor a quantidade, maior o tamanho da fonte (varia de 1 a 5 <em>hashtags</em>);</p>
+
+<p> •  uma palavra em negrito deve estar entre <code class="language-plaintext highlighter-rouge">**</code> e em itálico, entre <code class="language-plaintext highlighter-rouge">_</code>;</p>
+
+<p> •  expressões matemáticas LaTeX podem ser feitas usando a mesma sintaxe LaTeX, desde que estejam entre <code class="language-plaintext highlighter-rouge">$</code>;</p>
+
+<p> •  para incluir uma imagem no meio do texto siga o modelo de marcação: <code class="language-plaintext highlighter-rouge">![título opcional](img/image.png)</code>;</p>
+
+<p> •  para incluir uma palavra/frase redirecionável: <code class="language-plaintext highlighter-rouge">[palavra/texto](link)</code>.</p>
+
+<p>Quanto aos <em>chunks</em>, eles são blocos de códigos que podem ser adicionados por meio do botãozinho verde contendo a letra C e um sinal de + (à esquerda do botão <strong>Run</strong>, na janela de <em>script</em>) ou pelo atalho <code class="language-plaintext highlighter-rouge">Ctrl + Alt + I</code> no Linux ou Windows ou <code class="language-plaintext highlighter-rouge">Command + Option + I</code> no Mac. Quando renderizados, eles são adicionados ao arquivo <em>markdown</em> (.md) via pacote <code class="language-plaintext highlighter-rouge">{knitr}</code>, que executa os códigos dos <em>chunks</em> e gera-os em .md. Em seguida, o pacote <code class="language-plaintext highlighter-rouge">{pandoc}</code> converte o arquivo .md para a linguagem de programação (neste caso, o R) e no formato de arquivo (neste caso, HTML) escolhidos. Não se preocupe se os dois pacotes mencionados não estiverem instalados, o R fará questão de avisá-lo sobre esse contratempo. Além disso, nos <em>chunks</em> existem uma série de alternativas que permitem ao usuário controlar a execução e os resultados dos códigos, tais como:</p>
+
+<p> •  <code class="language-plaintext highlighter-rouge">echo = FALSE</code>: não exibir o código (TRUE, caso contrário);</p>
+
+<p> •  <code class="language-plaintext highlighter-rouge">eval = FALSE</code>: não executar o código (TRUE, caso contrário);</p>
+
+<p> •  <code class="language-plaintext highlighter-rouge">message = FALSE</code>: esconder mensagens geradas pelo código (TRUE, caso contrário);</p>
+
+<p> •  <code class="language-plaintext highlighter-rouge">fig.height = 10</code>: estipular a altura de uma figura (valor em polegadas);</p>
+
+<p> •  <code class="language-plaintext highlighter-rouge">fig.width = 10</code>: estipular a largura de uma figura (valor em polegadas);</p>
+
+<p> •  <code class="language-plaintext highlighter-rouge">fig.align = 'center'</code>: centralizar uma imagem.</p>
+
+<p>É sugerido ler a seção <a href="https://bookdown.org/yihui/rmarkdown/markdown-syntax.html">2.5 Markdown syntax</a> se a intenção é conhecer o conjunto de sintaxes disponível para RMarkdown e a seção <a href="https://bookdown.org/yihui/rmarkdown/r-code.html">2.6 R code chunks and inline R code</a> para ver a gama de opções que está a serviço dos <em>chunks</em>.</p>
+
+<p>Vamos ver como isso funciona na prática ao dar continuidade àquele arquivo .Rmd que criamos alguns parágrafos atrás.</p>
+
+<p><img src="/assets/images/posts/Relatórios-com-R-Markdown/fig3.png" alt="imagem" /></p>
+
+<p>Em nosso “mini relatório”, vejam que redigimos um pequeno texto como introdução igualmente como fazemos em editores de texto como o Word e Google Docs, por exemplo. Já para dar início à seção “Os dados”, utilizamos o marcador <code class="language-plaintext highlighter-rouge">###</code>. No entanto, a atenção mesmo fica por conta do <em>chunk</em>, para o qual demos o nome de “dados” - nomear um <em>chunk</em> é muito importante para identificar erros, a propósito. Neste caso, informamos que o código fosse avaliado e mostrado no relatório e que mensagens e alertas fossem omitidos.</p>
+
+<p>Agora reparem na próxima seção e nos <em>chunks</em> correspondentes.</p>
+
+<p><img src="/assets/images/posts/Relatórios-com-R-Markdown/fig4.png" alt="imagem" /></p>
+
+<p>Aqui, dividimos a seção “Análise” em duas abas, em que numa tem uma tabela cruzada entre raça e classificação e na outra, um gráfico de barras. A forma de fazer isso é muito simples, com o código HTML <code class="language-plaintext highlighter-rouge">{.tabset}</code>, mas o resultado é fantástico! Bom, mas voltando às configurações dos <em>chunks</em>, observem que dessa vez preferimos não apresentar os códigos, além de que o gráfico fosse centralizado.</p>
+
+<p>Terminado o relatório, o que precisamos fazer agora é renderizar nosso arquivo .Rmd para que ele seja convertido em um arquivo HTML, que foi o formato de <em>output</em> que escolhemos lá no início. Fazemos isso ao utilizar o atalho <code class="language-plaintext highlighter-rouge">Ctrl + Shift + K</code> no Linux ou Windows ou <code class="language-plaintext highlighter-rouge">Command + Shift + K</code> no Mac ou simplesmente clicando no botão <strong>Knit</strong> (que está acompanhado por um novelo de lã azul). Na realidade, é recomendável que a cada <em>chunk</em> construído seja feita a renderização do documento, principalmente se o seu relatório for muito extenso e com muitos <em>chunks</em>. Dessa forma, é possível acompanhar se o resultado está ficando ao seu agrado como também fica mais fácil identificar possíveis erros.</p>
+
+<p>Após “dar knit” em nosso RMarkdown, o relatório em HTML gerado é o que está na figura abaixo.</p>
+
+<p><img src="/assets/images/posts/Relatórios-com-R-Markdown/fig5.png" alt="imagem" /></p>
+
+<p>Legal, né?</p>
+
+<p>Ainda que de forma simples, mostramos como o RMarkdown pode conectar o documentar, o compartilhar e o comunicar dos dados de maneira prática e sem dar maiores dores de cabeça ao usuário (pois olhem só, propusemos um relatório em HTML sem precisar ter qualquer noção de HTML!). Além do mais, sua flexibilidade em se adequar aos diferentes tipos de linguagem de programação e formato de arquivo consegue agradar aos mais diversos perfis de profissionais, mesmo aqueles com pouca experiência em programação.</p>
+
+<p>A última e grande notícia é que o RMarkdown não se limita a um relatório estático com códigos e respectivos resultados. Com ele, também é possível fazer trabalhos acadêmicos, artigos, currículos profissionais, correio personalizado (encaminhar documentos em PDF automaticamente), slides, livros (o livro <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>, recomendado mais de uma vez neste post, é todo feito em? RMarkdown!), painéis interativos (geralmente por meio do pacote <code class="language-plaintext highlighter-rouge">{flexdashboard}</code>)… No bom sentido da expressão, o que foi mostrado aqui foi só a pontinha do <em>iceberg</em>!</p>
+:ET
