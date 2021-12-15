@@ -32,7 +32,7 @@ Ao clicar em **OK**, um arquivo .Rmd será aberto no editor de _script_ do RStud
 
 Como já deu para notar, é no cabeçalho (também conhecido como YAML) que estão as configurações gerais do documento. A princípio, determinamos somente o título, o nome dos autores e o formato do arquivo de interesse. Mas podem ser definidas muitas outras informações, como índice, seções, tema etc. Na [documentação do RMarkdown para HTML](https://bookdown.org/yihui/rmarkdown/html-document.html) é possível ver com detalhes todas essas possibilidades.
 
-Após estabelecido o cabeçalho, é a partir daqui que as marcações de texto do _markdown_ e os _chunks_ começam a ser bastante utilizados. As marcações são sintaxes que vão indicar o que são desde títulos de seções, tópicos e imagens a links, códigos e expressões matemáticas, por exemplo:
+Após estabelecido o cabeçalho, é a partir daqui que as marcações de texto do _markdown_ e os _chunks_ começam a ser bastante utilizados. As marcações são sintaxes que vão indicar o que são desde títulos de seções, tópicos e imagens a links, códigos e expressões matemáticas. Por exemplo:
 
 &nbsp;&bull;&nbsp; o tamanho do título de uma seção é determinado pela quantidade de #, em que quanto menor a quantidade, maior o tamanho da fonte (varia de 1 a 5 _hashtags_);
 
