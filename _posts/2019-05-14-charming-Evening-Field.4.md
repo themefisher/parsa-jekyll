@@ -6,9 +6,6 @@ description: "This is meta description"
 image: "assets/images/masonary-post/post-5.jpg"
 categories: 
   - "Food"
-tags:
-  - "Photos"
-  - "Food"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -33,11 +30,9 @@ consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porr
 ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
 labore et dolore magnam aliquam quaerat voluptatem.
 
-
 > Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-
 
 ![]({{site.baseurl}}/assets/images/post-img.jpg)
 
@@ -51,5 +46,3 @@ dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur au
 consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
 ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
 labore et dolore magnam aliquam quaerat voluptatem.
-
-

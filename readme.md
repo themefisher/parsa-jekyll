@@ -1,9 +1,6 @@
-<div align="center">
-	<h1>Parsa-jekyll-blog-theme</h1>
-	<p>Parsa jekyll Creative blog Template ported from <a href="https://themefisher.com">Themefisher's</a> <a href="https://themefisher.com/products/parsa-personal-blog-template/"> Parsa HTML Template</a>    </p>
-	<a href="http://demo.themefisher.com/parsa" >Live Preview</a>
-	<p>More free Bootstrap blog templates from <a href="https://themefisher.com/bootstrap-blog-templates/">Here</a>
-</div>
+# Parsa Jekyll
+
+Parsa jekyll Creative blog Template ported from [Parsa HTML Template](https://themefisher.com/products/parsa)
 
 ## Setup
 
@@ -14,7 +11,8 @@ Make sure GitHub Pages is enabled for your repo. It might take some time for the
 
 ## Customize
 
-Things you can customise in `_data/settings.yml` (no HTML/CSS):
+Things you can customize in `_data/settings.yml` (no HTML/CSS):
+
 - Theme General Settings ( name, logo, email, phone, address )
 - Hero Section
 - About Section
@@ -35,14 +33,18 @@ I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/de
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the **Parsa Theme**. Please Search [existing issues](https://github.com/themefisher/parsa-jekyll-blog-theme/issues). It’s possible someone has already reported the same problem.
-If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/parsa-jekyll-blog-theme/issues/new)
+We use GitHub Issues as the official bug tracker for the **Parsa Theme**. Please Search [existing issues](https://github.com/themefisher/parsa-jekyll/issues). It’s possible someone has already reported the same problem.
+If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/parsa-jekyll/issues/new)
 
 ## Technical Support or Questions
 
 If you have questions or need help integrating the product please [contact us](mailto:themefisher@gmail.com) instead of opening an issue.
 
-## Licensing
+<!-- licence -->
+## License
 
-- Copyright 2019 Themefisher (https://themefisher.com/)
-- Jekyll version is released under MIT License.
+Copyright (c) 2016 - Present, Designed & Developed by [Themefisher](https://themefisher.com)
+
+**Code License:** Released under the [MIT](https://github.com/themefisher/parsa-jekyll/blob/main/LICENSE) license.
+
+**Image license:** The images are only for demonstration purposes. They have their license, we don't have permission to share those images.

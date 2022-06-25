@@ -1,3 +1,4 @@
+---
 #-------------------------------
 # General Site Settings
 baseurl: "" # The subpath of your site, e.g. /blog
@@ -58,10 +59,10 @@ contact-form: example@email.com
 
 # Social links
 social:
-- {icon: "ti-facebook", link: "#"}
-- {icon: "ti-twitter-alt", link: "#"}
-- {icon: "ti-linkedin", link: "#"}
-- {icon: "ti-github", link: "#"}
+  - { icon: "ti-facebook", link: "#" }
+  - { icon: "ti-twitter-alt", link: "#" }
+  - { icon: "ti-linkedin", link: "#" }
+  - { icon: "ti-github", link: "#" }
 
 #-------------------------------
 # Comment Section (Disqus)
@@ -93,7 +94,7 @@ paginate_path: "/page/:num"
 # Pages Path
 defaults:
   - scope:
-      path: '_pages'
+      path: "_pages"
     values:
       permalink: /:basename:output_ext
 
@@ -101,16 +102,16 @@ include:
   - _pages
 
 # Tags
-tag_page_dir:         tag
-tag_page_layout:      tag_page
-tag_permalink_style:  pretty
+tag_page_dir: tag
+tag_page_layout: tag_page
+tag_permalink_style: pretty
 
 # categories
 jekyll-archives:
   enabled: all
   layout: category
   permalinks:
-    category: '/category/:name/'
+    category: "/category/:name/"
 
 # Exclude from processing.
 exclude:

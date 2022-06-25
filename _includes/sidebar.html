@@ -23,22 +23,10 @@
     {% endfor %}
   </div>
   <div class="widget">
-    <h6 class="mb-4">TAG</h6>
-    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-    {% assign tag_words = site_tags | split:',' | sort %}
-    <ul class="list-inline tag-list">
-      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-      {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-      <li class="list-inline-item m-1"><a href="{{ site.baseurl }}/tag/{{ this_word | cgi_escape }}">{{ this_word }}</a>
-      </li>
-      {% endunless %}{% endfor %}
-    </ul>
-  </div>
-  <div class="widget">
     <h6 class="mb-4">CATEGORIES</h6>
     <ul class="list-inline tag-list">
       {% for category in site.categories %}
-      <li class="list-inline-item m-1"><a href="{{ 'category/' | relative_url }}{{ category | first }}">{{ category | first }}</a></li>
+      <li class="list-inline-item m-1"><a href="{{ 'category/' | relative_url }}{{ category | first | slugify }}">{{ category | first }}</a></li>
       {% unless forloop.last %}&nbsp;{% endunless %}
       {% endfor %}
     </ul>

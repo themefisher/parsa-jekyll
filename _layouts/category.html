@@ -22,8 +22,10 @@ layout: default
           {% for post in page.posts %}
           <div class="col-sm-6 mb-5">
             <article class="text-center">
-              <img class="img-fluid mb-4" src="{{post.image | relative_url}}" alt="{{post.title}}">
-              <p class="text-uppercase mb-2">{{ post.categories }}</p>
+              <img class="img-fluid mb-4" src="{{post.image | relative_url }}" alt="{{post.title}}">
+              {% for category in post.categories %}
+              <a class="d-block mb-3 text-dark text-uppercase" href="{{ 'category/' | relative_url }}{{ category | slugify }}">{{ category }}</a>
+              {% endfor %}
               <h4 class="title-border"><a class="text-dark" href="{{ post.url | relative_url }}">{{post.title}}</a></h4>
               <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
               <a href="{{ post.url | relative_url }}" class="btn btn-transparent">read more</a>
