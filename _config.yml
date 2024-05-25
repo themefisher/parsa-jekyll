@@ -1,4 +1,3 @@
----
 #-------------------------------
 # General Site Settings
 baseurl: "" # The subpath of your site, e.g. /blog
@@ -30,6 +29,7 @@ menu:
 #       url: /peru/
 # ----------------------------------
 
+
 layout_home_page: true # Homepage layout ( two layout is available, you can set the another layout by change the value of layout_home_page "true" to "false")
 
 featured-post-slider: true # You can enable or disable the featured-post-slider using true or false values.
@@ -55,7 +55,7 @@ contact:
     street: 6 rip carl Avenue CA 90733
 
 # Contact Form
-contact-form: example@email.com
+contact-form: admin@blauv.net
 
 # Social links
 social:
@@ -70,13 +70,13 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 
 #-------------------------------
 # Instagram Feed
-instafeed: true # To enable the instafeed, use the value true. To turn off use the value false.
+instafeed: false # To enable the instafeed, use the value true. To turn off use the value false.
 userID: 4044026246
 accessToken: 4044026246.1677ed0.8896752506ed4402a0519d23b8f50a17
 
 #-------------------------------
 # Google Analytics
-google-analytics: # Add your identifier. For example UA-99631805-1.
+# google-analytics: # Add your identifier. For example UA-99631805-1.
 
 #-------------------------------
 # Build settings
