@@ -1,12 +1,12 @@
 ---
 #-------------------------------
 # General Site Settings
-baseurl: "" # The subpath of your site, e.g. /blog
-url: "" # The base hostname & protocol for your site, e.g. http://example.com
+baseurl: "Techie" # The subpath of your site, e.g. /blog
+url: "https://ChrisBlauvelt.github.io/Techie" # The base hostname & protocol for your site, e.g. http://example.com
 
 title: Parsa | Portfolio Jekyll Template
 logo: /assets/images/logo.png # You can add own logo
-description: # Add your awesome description
+description:  # Add your awesome description
 copyright: Copyright 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)
 # Preloader
 preloader: true # To disable preloader change value to false
@@ -37,46 +37,44 @@ featured-post-slider: true # You can enable or disable the featured-post-slider 
 #-------------------------------
 # Hero Section
 hero:
-  hero-subtitle: I’m a Freelance Interactive Art Director based in France. Focusing across branding and identity, digital and print.
+  hero-subtitle: I'm your frienly local Techie who wants to offload all of your tedious techincal issues for home and small business owners in the Gwinett and Fulton area!
   hero-banner: /assets/images/banner-img.png # Add your banner image '/assets/images/'
 
 #-------------------------------
 # Author Settings
 author:
-  name: Jhon Abraham
+  name: Chris Blauvelt
 
 #-------------------------------
 # Contact Info
 contact:
-  email: example@ymail.com
-  phone: +90 000 333 22
-  address:
-    city: Sydney
-    street: 6 rip carl Avenue CA 90733
+  email: admin@blauv.net 
+  phone: +1 (470) 665-4100
+  address: 
+    city: Suwanee
+    state: Georgia
 
 # Contact Form
-contact-form: example@email.com
+contact-form: admin@blauv.net
 
 # Social links
 social:
-  - { icon: "ti-facebook", link: "#" }
-  - { icon: "ti-twitter-alt", link: "#" }
-  - { icon: "ti-linkedin", link: "#" }
-  - { icon: "ti-github", link: "#" }
+  - { icon: "ti-linkedin", link: "www.linkedin.com/in/christopherblauveltjr" }
+  - { icon: "ti-github", link: "https://github.com/ChrisBlauvelt" }
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
+disqus-identifier: # Add your shortname for Disqus Comment. For example TechieNeighborAdmin
 
 #-------------------------------
 # Instagram Feed
-instafeed: true # To enable the instafeed, use the value true. To turn off use the value false.
+instafeed: false # To enable the instafeed, use the value true. To turn off use the value false.
 userID: 4044026246
 accessToken: 4044026246.1677ed0.8896752506ed4402a0519d23b8f50a17
 
 #-------------------------------
 # Google Analytics
-google-analytics: # Add your identifier. For example UA-99631805-1.
+# google-analytics: # Add your identifier. For example UA-99631805-1.
 
 #-------------------------------
 # Build settings
