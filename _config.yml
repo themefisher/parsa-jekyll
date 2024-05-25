@@ -1,12 +1,12 @@
 ---
 #-------------------------------
 # General Site Settings
-baseurl: "/blog" # The subpath of your site, e.g. /blog
-url: "https://ChrisBlauvelt.github.io/Techie" # The base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site, e.g. http://example.com
 
-title: TechieNeighbor | Your friendly neighborhood techie for hire!
-logo: /assets/images/logo-FINAL.jpg # You can add own logo
-description: Offload all of your tedious tech problems onto me, Chris Blauvelt, your TechieNeighbor that will comprehensively address the IT needs of home and small business owners throughout Gwinett and Fulton! # Add your awesome description
+title: Parsa | Portfolio Jekyll Template
+logo: /assets/images/logo.png # You can add own logo
+description: # Add your awesome description
 copyright: Copyright 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)
 # Preloader
 preloader: true # To disable preloader change value to false
@@ -38,34 +38,36 @@ featured-post-slider: true # You can enable or disable the featured-post-slider 
 #-------------------------------
 # Hero Section
 hero:
-  hero-subtitle: I'm a systems administrator by day with an extreme love for all things technical and electronic! I will always strive to honor my core business tenants of transparency and comprehensive solutions that leave my customers satisfied in the long-term. 
+  hero-subtitle: I’m a Freelance Interactive Art Director based in France. Focusing across branding and identity, digital and print.
   hero-banner: /assets/images/banner-img.png # Add your banner image '/assets/images/'
 
 #-------------------------------
 # Author Settings
 author:
-  name: Christopher Blauvelt
+  name: Jhon Abraham
 
 #-------------------------------
 # Contact Info
 contact:
-  email: admin@blauv.net
-  phone: +1 (470) 665-4100
+  email: example@ymail.com
+  phone: +90 000 333 22
   address:
-    city: Suwanee
-    street: Right down the street (:
+    city: Sydney
+    street: 6 rip carl Avenue CA 90733
 
 # Contact Form
 contact-form: admin@blauv.net
 
 # Social links
 social:
-  - { icon: "ti-linkedin", link: "https://www.linkedin.com/in/christopherblauveltjr/" }
-  - { icon: "ti-github", link: "https://github.com/ChrisBlauvelt/" }
+  - { icon: "ti-facebook", link: "#" }
+  - { icon: "ti-twitter-alt", link: "#" }
+  - { icon: "ti-linkedin", link: "#" }
+  - { icon: "ti-github", link: "#" }
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: TechieAdmin # Add your shortname for Disqus Comment. For example mr-brown
+disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 
 #-------------------------------
 # Instagram Feed
@@ -75,7 +77,7 @@ accessToken: 4044026246.1677ed0.8896752506ed4402a0519d23b8f50a17
 
 #-------------------------------
 # Google Analytics
-google-analytics: # Add your identifier. For example UA-99631805-1.
+# google-analytics: # Add your identifier. For example UA-99631805-1.
 
 #-------------------------------
 # Build settings
